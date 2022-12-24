@@ -1,0 +1,268 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5eff30e6bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Blog.css">
+    <title>Naman Agarwal</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+          margin: 0;
+          padding: 0;
+          box-sizing: inherit;
+        }
+    
+        html {
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+        
+        body {
+          /* padding: 5rem 5rem 10rem; */
+          line-height: 1.7;
+          font-family: 'Nunito Sans', sans-serif;
+          color: #555;
+          min-height: 100vh;
+          background: linear-gradient(to bottom right, #9be15d, #00e3ae);
+        }
+    
+        h1 {
+          font-family: 'Megrim', sans-serif;
+          font-size: 6rem;
+          color: white;
+          transform: skewY(-5deg);
+          text-align: center;
+          position: relative;
+          word-spacing: 3px;
+        }
+    
+        h1::before {
+          content: '';
+          display: block;
+          height: 65%;
+          width: 49%;
+          position: absolute;
+          top: 105%;
+          left: 50%;
+          background: linear-gradient(to bottom, #9be15d, #00e3ae);
+          opacity: 0.8;
+          z-index: -1;
+          transform: skewY(370deg) translate(-50%, -50%);
+        }
+    
+        .container {
+          width: 95rem;
+          margin: 0 auto;
+        }
+    
+        .cards-container {
+          margin-top: 8rem;
+        }
+    
+        .card {
+          background: white;
+          box-shadow: 0 2rem 6rem 1rem rgba(0, 0, 0, 0.15);
+          margin-bottom: 5rem;
+          transform: skewX(-20deg);
+          display: flex;
+          transition: all 0.5s;
+        }
+    
+        .card__emoji {
+          font-size: 5.5rem;
+          line-height: 1.2;
+          padding: 1.5rem 6rem 0.5rem 1.5rem;
+          letter-spacing: -4rem;
+          transform: skewX(20deg);
+        }
+    
+        .card__title-box {
+          background: linear-gradient(to bottom, #9be15d, #00e3ae);
+          margin-right: auto;
+          display: flex;
+          align-items: center;
+          padding: 0 3rem;
+        }
+    
+        .card__title {
+          font-family: 'Megrim', sans-serif;
+          color: white;
+          font-size: 3.25rem;
+          transform: skewX(20deg);
+        }
+    
+        .card__details {
+          display: flex;
+        }
+    
+        .card__detail-box {
+          align-self: stretch;
+          border-right: 1px solid #ddd;
+          display: flex;
+          align-items: center;
+        }
+    
+        .card__detail-box:last-child {
+          border: none;
+        }
+    
+        .card__detail {
+          font-weight: 400;
+          font-size: 1.8rem;
+          transform: skewX(20deg);
+          padding: 1.75rem;
+        }
+    
+        .card__detail--organic {
+          font-weight: 900;
+          text-transform: uppercase;
+          font-size: 1.9rem;
+          background-image: linear-gradient(to right, #9be15d, #00e3ae);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+    
+        .card__detail--price {
+          font-weight: 900;
+          font-size: 1.9rem;
+        }
+    
+        .card__link:link,
+        .card__link:visited {
+          flex: 0 0 auto;
+          background-color: #79e17b;
+          color: white;
+          font-size: 1.6rem;
+          font-weight: 900;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 2.5rem;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s;
+        }
+    
+        .card__link:hover,
+        .card__link:active {
+          background-color: #9be15d;
+        }
+    
+        .card__link span {
+          transform: skewX(20deg);
+        }
+    
+        .card:hover {
+          transform: skewX(-20deg) scale(1.08);
+          box-shadow: 0 3rem 8rem 2rem rgba(0, 0, 0, 0.15);
+        }
+    
+        .emoji-left {
+          font-size: 2rem;
+          margin-right: 1rem;
+        }
+    
+        .emoji-right {
+          font-size: 2rem;
+          margin-left: 1rem;
+        }
+    
+        .not-organic {
+          display: none;
+        }
+        .NavBar {
+    background-color: #2B2B2B;
+    border-bottom: 2px solid #565656;
+    padding-left: 210px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#About {
+    background: #494f4fd4;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: .6rem .8rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: whitesmoke;
+    border: 2px solid #565656;
+    border-radius: 4px;
+    margin-right: 30px;
+
+}
+
+.nav-102 {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: .6rem .8rem;
+    font-weight: 500;
+    color: rgb(174, 174, 174);
+    text-transform: capitalize;
+
+}
+
+
+
+@media screen and (max-width: 850px) {
+    .NavBar {
+        padding-left: 10px;
+    }
+
+    #exp-nav {
+        display: none;
+    }
+
+    #About {
+        font-size: .8rem;
+        line-height: 1;
+        font-weight: 500;
+        margin-right: 10px;
+    }
+
+    .nav-102 {
+        font-size: 0.9rem;
+        padding: .3rem .4rem;
+        font-weight: 300;
+    }
+}
+
+@media screen and (max-width: 364px) {
+    #btn-nav01{
+        display: none;
+    }
+}
+/* End of Nav Bar */
+      </style>
+</head>
+<body>
+    <!-- Start of navigation bar -->
+    <div class="NavBar" id="Top-navbar">
+        <a href="../index.html" id="About">Naman Agarwal</a>
+        <a href="../projects/projects.html" id="btn-nav01" class="nav-102">Projects</a>
+        <a href="" id="exp-nav" class="nav-102">Experience</a>
+        <a href="../contact me/Contact_Me.html" id="btn-nav" class="nav-102">Contact</a>
+        <a href="resume\Naman Agarwal (2).pdf" id="btn-nav" class="nav-102" download><i
+                class="fa-solid fa-file"></i>&nbsp;Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <!--  <i class="fa-solid fa-bars"></i> -->
+        </a>
+    </div>
+    <!--  End of navigation Bar -->
+
+    <div class="container">
+        <h1>🧧 Blog Farm 💻</h1>
+    
+        <div class="cards-container">
+          {%PRODUCT_CARDS%}
+        </div>
+      </div>
+
+</body>
+
+</html>
